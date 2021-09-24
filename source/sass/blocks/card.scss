@@ -1,0 +1,182 @@
+.card {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    max-width: 350px;
+    height: 430px;
+    overflow: hidden;
+
+
+    &--albania {
+        margin-left: 61px;
+        margin-bottom: 100px;
+    }
+    
+    &--macedonia {
+        margin-left: 61px;
+    }
+    
+    &--gora {
+        margin-right: 120px;
+    }
+
+    &-text {
+        position: absolute;
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: -0.41499999165534973px;
+        text-align: center;
+
+        color: $dark-grey;
+        background-color: $white;
+        padding: 17px 63px;
+        
+        bottom: 0;
+        left: 20%;
+
+        margin: 0;
+
+        &--albania {
+            padding: 16px 54px;
+            left: 19.5%;
+        }
+
+        &--macedonia {
+            padding: 16px 37px;
+            left: 19%;
+        }
+
+        &--gora {
+            padding: 16px 32px;
+            left: 19.5%;
+        }
+
+        &--horvatia {
+            padding: 15px 49px;
+            left: 19.5%;
+        }
+            
+    }     
+
+    &-button {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+
+        padding: 30px 23px;
+        border: 1px solid $white;
+
+        background: none;
+        color: $white;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        width: 266px;
+
+        display: none;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $dark-grey;
+        }
+    }
+
+    &:hover {
+        background: $dark;
+        transition: 0.3s ease;
+        
+    }
+
+    &:hover > &-button {
+        display: block;
+        transition: 0.3s ease;
+    }
+
+    &:hover > picture,
+    &:hover > .card-text {
+        opacity: 0.4;
+    }
+
+    @media (max-width: $desktop-width) {
+        width: 288px;
+        height: 425px;
+        pointer-events: none;
+
+        &--albania {
+            margin: 0;
+        }
+
+        &--macedonia {
+            margin: 0;
+            margin-top: 41px;
+        }
+
+        &--gora,
+        &--horvatia {
+            width: 288px;
+            height: 425px;
+
+            margin-right: 0;
+            margin-top: 41px;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 41px;
+        }
+
+   
+        &-text {
+            padding: 16px 63px;
+            left: 13%;
+
+            &--albania {
+                padding: 16px 53px;
+                left: 12.4%;
+
+            }
+
+            &--macedonia {
+                padding: 16px 36px;
+                left: 13%;
+            }
+    
+            &--gora {
+                padding: 16px 32px;
+                left: 12%;
+            }
+    
+            &--horvatia {
+                padding: 17px 49px;
+                left: 13%;
+            }
+        }
+        
+    }
+
+    @media (max-width: $tablet-width) {
+        margin-left: 0;
+
+        &:nth-child(n) {
+            margin: 0;
+            margin-left: 0;
+            margin-bottom: 35px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+

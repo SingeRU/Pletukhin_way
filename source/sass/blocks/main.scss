@@ -1,0 +1,15 @@
+.main {
+    position: relative;
+    z-index: 1;
+
+    background: url("../../img/main-background.jpg") no-repeat;
+
+    @media (max-width: $desktop-width) {
+        background: url("../../img/main-bg-tab.jpg") no-repeat;
+    }
+
+    @media (max-width: $tablet-width) {
+        background: url("../../img/main-bg-mob.jpg") no-repeat;
+    }
+
+}

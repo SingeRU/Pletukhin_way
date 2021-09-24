@@ -1,0 +1,160 @@
+//Тут будет scss для header
+.header {
+    padding: 26px 0 26px 0;
+    // background-color: red;
+
+    &__nav {
+        display: flex;
+        flex: 0 1 33.333%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        padding-right: 10px;
+        padding-left: 10px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark;
+    }
+    
+    &__logo {
+        padding-left: 12px;
+        padding-top: 14px;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__list-item:nth-child(2) {
+        margin-left: 41px;
+    }
+
+    &__list-item:last-child {
+        padding-left: 110px;
+    }
+
+    &__list-link {
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        color: $dark;
+        text-decoration: none;
+    }
+
+    &__list-link:hover,
+    &__list-link:active {
+        color: $orange;
+       
+    }
+
+    &__list-phone {
+        position: relative;
+
+        display: inline-block;
+        text-decoration: underline;
+        
+        font-weight: 400;
+        font-size: 18px;
+        color: $dark;
+
+        padding-top: 2px;
+
+        cursor: pointer;
+
+        transition: 0.3s ease;
+    }
+
+    &__list-phone:hover,
+    &__list-phone:active {
+        color: $orange;
+       
+    }
+
+    &__list-phone::before {
+        position: absolute;
+        content: "";
+        background: url("../../img/phone.svg");
+        width: 30px;
+        height: 30px;
+        left: -40px;
+        top: -3px;
+    }
+
+    &__list-phone:hover + &__list-phone::before,
+    &__list-phone:active + &__list-phone::before {
+        background: url("../../img/phone-orange.svg");
+    }
+
+    &__burger-button {
+        display: none;
+    }
+
+    @media (max-width: $desktop-width) {
+        padding: 0;
+        height: 50px;
+        
+        &__nav {
+            padding-top: 17px;
+            
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__logo {
+            padding-left: 10px;
+            padding-top: 0;
+        }
+
+        &__burger {
+            transform: translate(10px,-17px);
+        }
+
+        &__burger-button {
+            display: block;
+            position: relative;
+            cursor: pointer;
+
+            width: 72px;
+            height: 50px;
+            
+            border: 0;
+            
+            background-color: $orange;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 25px;
+                width: 22.5px;
+                height: 1px;
+                background-color: $white;
+                box-shadow: 0 8px 0 0 $white,0 16px 0 0 $white;
+            }
+        }
+
+        &__burger-button:hover {
+            background-color: $light-orange;
+        }
+      }
+
+      @media (max-width: $tablet-width) {
+        &__logo {
+            padding-left: 6px;
+        }
+
+        &__burger-button {
+            width: 50px;
+            &::before {
+                left: 14px;
+            }
+        }
+      }
+}

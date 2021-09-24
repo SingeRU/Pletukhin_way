@@ -1,0 +1,14 @@
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "scaffolding.scss";
+//Тут остальные импорта
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/main.scss";
+@import "blocks/promo.scss";
+@import "blocks/catalog.scss";
+@import "blocks/card.scss";
+@import "blocks/tabs.scss";
+@import "blocks/reviews.scss";
+@import "blocks/prices.scss";

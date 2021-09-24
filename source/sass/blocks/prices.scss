@@ -1,0 +1,482 @@
+.prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 24px;
+    transform: translateY(-38.5%);
+    grid-gap: 2.6%;
+
+    &__card {
+        width: 368px;
+        height: 672px;
+        border: 3px solid $opacity-grey;
+        border-radius: 4px;
+        padding: 13px 26px;
+
+        grid-row: 1/1;
+
+        cursor: pointer;
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 34px;
+            letter-spacing: 0px;
+            text-align: left;
+
+            color: $opacity-dark;
+            
+        }
+
+        &-subtitle {
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 34px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+
+        &-price {
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px;
+            letter-spacing: 0px;
+            text-align: right;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            position: relative;
+
+            padding-right: 27px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: $orange;
+
+                left: 0;
+                bottom: -28px;
+            }
+        }
+
+        &-button {
+            background-color: $orange;
+            color: $white;
+            width: 100%;
+
+            cursor: pointer;
+
+            border: none;
+
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 2px;
+            text-align: left;
+            text-transform: uppercase;
+
+            padding: 30px 65px 30px 70px;
+        }
+
+
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 30px;
+        margin-top: 57px;   
+        margin-bottom: 57px;
+
+        &-item {
+            position: relative;
+            height: auto;
+            margin-bottom: 3.8%;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 14px;
+                height: 12px;
+                background: url("../../img/check.svg");
+                left: -26px;
+            }
+        }
+
+        &-item:first-child {
+            &::before{
+                top: 13px;
+            }
+            
+        }
+
+        &-item:nth-child(2) {
+            &::before {
+                top: 4px;
+            }
+            
+        } 
+
+        &-item:nth-child(3) {
+            &::before {
+                top: 8px;
+            }
+            
+        }
+
+        &-item:nth-child(4) {
+            &::before {
+                top: 14px;
+            }
+            
+        }
+
+        &-text {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: left;
+
+        }
+         
+        &-item--eco {
+            margin-bottom: 5.3%;
+
+            grid-column: 2/3;
+
+            &::before {
+
+                background: url("../../img/check-orange.svg");
+                left: -29px;
+            }
+            
+        }
+
+        &-item--eco:first-child {
+            &::before{
+                top: 9px;
+            }
+            
+        }
+
+        &-item--eco:nth-child(2) {
+            &::before {
+                top: 10px;
+            }
+            
+        } 
+
+        &-item--eco:nth-child(3) {
+            &::before {
+                top: 9px;
+            }
+            
+        }
+
+        &-item--eco:nth-child(4) {
+            &::before {
+                top: 11px;
+            }
+            
+        }
+
+        &-item--eco:nth-child(5) {
+            &::before {
+                top: 10px;
+            }
+            
+        }
+    }
+
+    &__card--eco {
+        padding: 15px 27px;
+
+    }
+
+    &__card--eco ul {
+        margin-bottom: 30px;
+    }
+
+    &__contacts {
+        grid-column: 3 / 3; 
+        
+        &-title {
+            position: relative;
+            font-size: 55px;
+            font-weight: 600;
+            line-height: 90px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            padding-right: 57px;
+            margin-top: 31%;
+            margin-bottom: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 175px;
+                height: 2.92px;
+                background-color: $orange;
+                bottom: -17px;
+                left: 68px;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            padding-left: 65px;
+            margin-top: 50px;
+
+            color: $special-grey;
+
+        }
+
+        &-contact {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 34px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            margin-top: 59px;
+            padding-left: 82px;
+            margin-bottom: 14px;
+
+        }
+
+        &-phone {
+            position: relative;
+
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            display: block;
+
+            padding-left: 79px;
+
+            color: $black;
+            text-decoration: none;
+
+            transition: 0.3s ease;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 30px;
+                background: url("../../img/phone-orange.svg");
+
+                left: 63px;
+                top: -1px;
+            }
+            
+        }
+
+        &-phone:hover {
+            color: $orange;
+        }
+    }
+
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 629px;
+        grid-gap: 0;
+
+        padding-right: 22px;
+
+        &__card {
+            width: 288px;
+            height: 629px;
+            border-radius: 4px;
+
+            margin-top: 40px;
+            margin-left: 46px;
+            padding: 0;
+
+            grid-row: 2/2;
+    
+            cursor: pointer;
+
+            &-button {
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                letter-spacing: 2px;
+                text-align: left;
+
+                padding: 19px 65px 19px 70px;
+    
+            }
+
+            &-title {
+                flex-wrap: wrap;
+                text-align: center;
+
+                padding: 12px 5px;
+            }
+
+            &-subtitle,
+            &-price {
+                width: 100%;
+                text-align: center;
+            }
+
+            &-subtitle {
+                font-size: 24px;
+
+                margin: 0;
+                margin-top: 14px;
+            }
+
+            &-price {
+                margin-top: 11px;
+                margin-bottom: 0;
+            }
+
+            &-text {
+                margin-top: 0;
+                text-align: center;
+                padding: 0 16px;
+
+                &::after {
+                    bottom: -9px;
+                    left: 18px;
+
+                    width: 248px;
+                }
+            }
+        }
+
+        &__card--eco {
+            margin-left: 23px;
+        }
+
+        &__card--eco div {
+            padding: 12px 10px;
+        }
+
+        &__list {
+            padding-left: 48px;
+            margin-top: 30px;
+            margin-bottom: 46px;
+            padding-right: 19px;
+
+            width: 100%;
+
+            &-item:first-child {
+                margin-bottom: 2.5%;
+                &::before{
+                    top: 11px;
+                }
+                
+            }
+    
+            &-item:nth-child(2) {
+                margin-bottom: 4.2%;
+                &::before {
+                    top: 10px;
+                }
+                
+            } 
+    
+            &-item:nth-child(3) {
+                margin-bottom: 4.8%;
+                &::before {
+                    top: 10px;
+                }
+                
+            }
+    
+            &-item:nth-child(4) {
+                &::before {
+                    top: 11px;
+                }
+                
+            }
+            
+        }
+
+        &__contacts {
+            grid-column: 1 / -1;
+            margin-top: 122px;
+
+            &-title {
+                margin-top: 0;
+                padding: 0;
+
+                font-size: 30px;
+                line-height: 45px;
+                letter-spacing: 0px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-text {
+                margin-top: 21px;
+                text-align: center;
+                padding: 0;
+            }
+
+            &-contact {
+                font-family: Montserrat;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 34px;
+                letter-spacing: 0em;
+               
+                padding: 0;
+                margin-top: 32px;
+                margin-bottom: 10px;
+            }
+
+            &-phone {
+                padding: 0;
+
+                font-size: 18px;
+                color: $orange;
+                text-decoration: underline;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.prices__card--active {
+    border: 3px solid $orange;
+}
+
+.prices__card--active div {
+    color: $orange;
+}

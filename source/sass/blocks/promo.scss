@@ -1,0 +1,154 @@
+.promo {
+    height: 860px;
+    color: $white;
+
+    &-container {
+        transform: translate(100%, 49.5%);
+        width: 50%;
+
+        padding-left: 10.3%;
+    }
+
+    &-title {
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        letter-spacing: -1.1066670417785645px;
+        text-align: left;
+        
+        padding-right: 2%;
+        margin: 0;
+    }
+
+    &-text {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -0.4666666090488434px;
+        text-align: left;
+
+        margin-top: 28px;
+        margin-bottom: 34px;
+        padding-right: 18%;
+    }
+
+    &-button {
+        position: relative;
+        display: inline-block;
+        
+
+        background-color: $orange;
+        color: $white;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 2px;
+        text-align: left;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        cursor: pointer;
+
+        border: none;
+
+        padding: 0 40px;
+        padding-top: 29px;
+        width: 340px;
+        height: 75px;
+
+        transition: 0.3s ease;
+
+        &__arrow {
+            position: absolute;
+            right: 11.7%;
+        }
+    }
+
+    &-button:hover {
+        background-color: $light-orange;
+    }
+
+    @media (max-width: $desktop-width) {
+        text-align: center;
+        height: 344px;
+
+        &-container {
+            transform: translate(0, 0);
+            width: 100%;
+            padding: 0;
+            padding-top: 61px;
+        }
+
+        &-title {
+            font-size: 30px;
+            line-height: 45px;
+            letter-spacing: 0px;
+            text-align: center;
+            
+            padding: 0;
+
+        }
+
+        &-text {
+            padding: 0;
+            padding: 0 22%;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+            text-align: center;
+        }
+
+        &-button {
+            width: 250px;
+            height: 50px;
+
+            padding: 19px 45px 0 40px;
+
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 2px;
+            text-align: left;
+
+            &__arrow {
+                right: 15.7%;
+                top: 16px;
+            }
+
+        }
+    }
+
+    @media (max-width: $tablet-width) {
+        height: 420px;
+
+        &-container {
+            height: 235px;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 150%;
+            padding: 0 20px;
+            padding-top: 20px;
+        }
+
+        &-text {
+            color: $dark-grey;
+            padding: 0 20px;
+            margin-top: 103px;
+        }
+
+        &-button {
+            width: 288px;
+            margin-top: 10px;
+
+            &__arrow {
+                right: 13.7%;
+            }
+        }
+    }
+}

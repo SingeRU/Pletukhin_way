@@ -1,0 +1,295 @@
+.tabs {
+    margin-top: 103px;
+    height: 1210px;
+
+    &__nav {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        border-bottom: 1px solid $opacity-grey;
+
+        width: 77%;
+        
+        margin-left: 2%;
+        padding: 16px 0;
+
+        &-button {
+            padding: 0;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.41499999165534973px;
+            text-align: center;
+            color: $dark-grey;
+            opacity: 0.3;
+
+            cursor: pointer;
+
+            border: none;
+            background-color: $white;
+
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-right: 10.8%;
+            }
+
+        }
+    }
+
+    &__content {
+        height: 1210px;
+        background: url("../../img/background-tab.png") no-repeat;
+        background-position: -112px 43px;
+
+        margin-top: 38px;
+        padding: 0 24px;
+
+        &-container {
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            position: relative;
+        }
+
+        &-promo {
+            width: 424px;
+        }
+
+        &-title {
+            position: relative;
+
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 90px;
+            letter-spacing: -1.2450000047683716px;
+            text-align: left;
+            color: $dark-grey;
+
+            &::after {
+                content: "";
+                position: absolute;
+                
+                width: 175px;
+                height: 2.92px;
+    
+                background-color: $orange;
+    
+                bottom: -16px;
+                left: -1px; 
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: -0.4666666090488434px;
+            text-align: left;
+            color: $dark-grey;
+
+            opacity: 0.7;
+            margin: 0;
+            margin-top: 47px;
+            padding-right: 48px;
+        }
+
+        
+        &-button {
+            cursor: pointer;
+
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 2px;
+            text-align: left;
+            text-transform: uppercase;
+
+            border: none;
+
+            background-color: $orange;
+            color: $white;
+
+            padding: 30px 39px;
+            margin-top: 50px;
+        }
+
+    }
+
+
+    @media (max-width: $desktop-width) {
+        margin-top: 78px;
+
+        &__nav {           
+            width: 97%;
+
+            
+            margin-left: 2.7%;
+            padding: 16px 0;
+    
+            &-button {
+                padding: 0;
+
+                opacity: 0.3;
+                overflow-x: scroll;
+    
+                cursor: pointer;
+    
+                border: none;
+                background-color: $white;
+    
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin-right: 13.4%;
+                }
+                
+                &:nth-child(4) {
+                    margin-right: 0;
+                }
+
+    
+            }
+        }
+
+        &__content {
+            height: 819px;
+            background: none;
+    
+            margin-top: 0;
+            padding: 0;
+    
+            &-container {
+                justify-content: center;
+                flex-wrap: wrap;
+    
+                position: relative;
+            }
+    
+            &-promo {
+                width: 100%;
+                text-align: center;
+                
+                padding: 0 24px;
+            }
+    
+            &-title {   
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 45px;
+                letter-spacing: 0px;
+                text-align: center;
+
+                margin-top: 5px;
+                
+    
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &-text {
+                text-align: center;
+                color: $dark-grey;
+    
+                opacity: 0.7;
+                margin: 0;
+                margin-top: 20px;
+                padding-right: 0;
+            }
+    
+            
+            &-button {   
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+
+                border: none;
+    
+                background-color: $orange;
+                color: $white;
+    
+                padding: 19px 52px;
+                margin-top: 19px;
+            }
+    
+        }
+    }
+
+    @media (max-width: $tablet-width) {
+        margin-top: 24px;
+        
+        &__nav {
+            margin-left: 4.7%;
+            width: 94%;
+
+            &-button {
+                margin-right: 0;
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-right: 0;
+                }
+
+                &:first-child {
+                    margin-right: 33.3%;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+        }     
+
+        &__content {
+            &-promo {
+                padding: 0;
+            }
+
+            &-title {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+
+                margin-top: 23px;
+            }
+
+            &-text {
+                padding: 0 18px;
+            }
+
+            &-button {
+                padding: 19px 70px;
+                font-family: Montserrat;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                letter-spacing: 2px;
+                text-align: left;
+
+                width: 287px;
+
+            }
+        }
+    }
+}
+
+.tabs__nav-button--active {
+    color: $orange;
+    opacity: 1;
+}
+
+.tabs__content-container--active {
+    display: flex;
+}
+
